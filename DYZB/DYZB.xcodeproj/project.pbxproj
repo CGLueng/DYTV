@@ -74,6 +74,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0D83841DE4374300C3B87C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D83851DE4374300C3B87C /* Follow(关注) */,
+				3F0D83861DE4374300C3B87C /* Home(首页) */,
+				3F0D83871DE4374300C3B87C /* Live(直播) */,
+				3F0D83881DE4374300C3B87C /* Main(主要) */,
+				3F0D83891DE4374300C3B87C /* Profile(我的) */,
+				3F0D838A1DE4374300C3B87C /* Tools(工具) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3F0D83851DE4374300C3B87C /* Follow(关注) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Follow(关注)";
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		3F0D83861DE4374300C3B87C /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Home(首页)";
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3F0D83871DE4374300C3B87C /* Live(直播) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Live(直播)";
+			path = Live;
+			sourceTree = "<group>";
+		};
+		3F0D83881DE4374300C3B87C /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Main(主要)";
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3F0D83891DE4374300C3B87C /* Profile(我的) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Profile(我的)";
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3F0D838A1DE4374300C3B87C /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Tools(工具)";
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		3FE11F0B1DE42A3C00F62CFE = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +158,13 @@
 		3FE11F161DE42A3C00F62CFE /* DYZB */ = {
 			isa = PBXGroup;
 			children = (
-				3FE11F171DE42A3C00F62CFE /* AppDelegate.swift */,
 				3FE11F191DE42A3C00F62CFE /* ViewController.swift */,
 				3FE11F1B1DE42A3C00F62CFE /* Main.storyboard */,
+				3FE11F171DE42A3C00F62CFE /* AppDelegate.swift */,
 				3FE11F1E1DE42A3C00F62CFE /* Assets.xcassets */,
 				3FE11F201DE42A3C00F62CFE /* LaunchScreen.storyboard */,
 				3FE11F231DE42A3C00F62CFE /* Info.plist */,
+				3F0D83841DE4374300C3B87C /* Classes */,
 			);
 			path = DYZB;
 			sourceTree = "<group>";
@@ -114,7 +176,7 @@
 				3FE11F2E1DE42A3C00F62CFE /* Info.plist */,
 			);
 			path = DYZBTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3FE11F361DE42A3C00F62CFE /* DYZBUITests */ = {
 			isa = PBXGroup;
