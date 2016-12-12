@@ -11,6 +11,7 @@
 		3F0D838F1DE44EEB00C3B87C /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0D838E1DE44EEB00C3B87C /* Live.storyboard */; };
 		3F0D83921DE44F0A00C3B87C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0D83901DE44F0A00C3B87C /* Follow.storyboard */; };
 		3F0D83941DE44F2300C3B87C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0D83931DE44F2300C3B87C /* Profile.storyboard */; };
+		3FC9450F1DFE341500AD18E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9450E1DFE341500AD18E1 /* MainViewController.swift */; };
 		3FE11F181DE42A3C00F62CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11F171DE42A3C00F62CFE /* AppDelegate.swift */; };
 		3FE11F1A1DE42A3C00F62CFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11F191DE42A3C00F62CFE /* ViewController.swift */; };
 		3FE11F1D1DE42A3C00F62CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE11F1B1DE42A3C00F62CFE /* Main.storyboard */; };
@@ -39,9 +40,10 @@
 
 /* Begin PBXFileReference section */
 		3F0D838C1DE44EA100C3B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
-		3F0D838E1DE44EEB00C3B87C /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		3F0D838E1DE44EEB00C3B87C /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Live.storyboard; path = ../../../Live.storyboard; sourceTree = "<group>"; };
 		3F0D83911DE44F0A00C3B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
-		3F0D83931DE44F2300C3B87C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3F0D83931DE44F2300C3B87C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../../Profile.storyboard; sourceTree = "<group>"; };
+		3FC9450E1DFE341500AD18E1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3FE11F141DE42A3C00F62CFE /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE11F171DE42A3C00F62CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE11F191DE42A3C00F62CFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,64 +84,184 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F0D83841DE4374300C3B87C /* Classes */ = {
+		3FC944F81DFE322300AD18E1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3F0D83851DE4374300C3B87C /* Follow(关注) */,
-				3F0D83861DE4374300C3B87C /* Home(首页) */,
-				3F0D83871DE4374300C3B87C /* Live(直播) */,
-				3F0D83881DE4374300C3B87C /* Main(主要) */,
-				3F0D83891DE4374300C3B87C /* Profile(我的) */,
-				3F0D838A1DE4374300C3B87C /* Tools(工具) */,
+				3FC945051DFE322300AD18E1 /* Main */,
+				3FC944FD1DFE322300AD18E1 /* Home */,
+				3FC945011DFE322300AD18E1 /* Live */,
+				3FC944F91DFE322300AD18E1 /* Follow */,
+				3FC945091DFE322300AD18E1 /* Profile */,
+				3FC9450D1DFE322300AD18E1 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		3F0D83851DE4374300C3B87C /* Follow(关注) */ = {
+		3FC944F91DFE322300AD18E1 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				3FC944FA1DFE322300AD18E1 /* controller */,
+				3FC944FB1DFE322300AD18E1 /* model */,
+				3FC944FC1DFE322300AD18E1 /* view */,
 			);
-			name = "Follow(关注)";
 			path = Follow;
 			sourceTree = "<group>";
 		};
-		3F0D83861DE4374300C3B87C /* Home(首页) */ = {
+		3FC944FA1DFE322300AD18E1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Home(首页)";
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3FC944FB1DFE322300AD18E1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FC944FC1DFE322300AD18E1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D83901DE44F0A00C3B87C /* Follow.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3FC944FD1DFE322300AD18E1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3FC944FE1DFE322300AD18E1 /* controller */,
+				3FC944FF1DFE322300AD18E1 /* model */,
+				3FC945001DFE322300AD18E1 /* view */,
+			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		3F0D83871DE4374300C3B87C /* Live(直播) */ = {
+		3FC944FE1DFE322300AD18E1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Live(直播)";
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3FC944FF1DFE322300AD18E1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FC945001DFE322300AD18E1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D838B1DE44EA100C3B87C /* Home.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3FC945011DFE322300AD18E1 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				3FC945021DFE322300AD18E1 /* controller */,
+				3FC945031DFE322300AD18E1 /* model */,
+				3FC945041DFE322300AD18E1 /* view */,
+			);
 			path = Live;
 			sourceTree = "<group>";
 		};
-		3F0D83881DE4374300C3B87C /* Main(主要) */ = {
+		3FC945021DFE322300AD18E1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Main(主要)";
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3FC945031DFE322300AD18E1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FC945041DFE322300AD18E1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D838E1DE44EEB00C3B87C /* Live.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3FC945051DFE322300AD18E1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3FC945061DFE322300AD18E1 /* controller */,
+				3FC945071DFE322300AD18E1 /* model */,
+				3FC945081DFE322300AD18E1 /* view */,
+			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		3F0D83891DE4374300C3B87C /* Profile(我的) */ = {
+		3FC945061DFE322300AD18E1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FC9450E1DFE341500AD18E1 /* MainViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3FC945071DFE322300AD18E1 /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Profile(我的)";
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FC945081DFE322300AD18E1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3FE11F1B1DE42A3C00F62CFE /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3FC945091DFE322300AD18E1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3FC9450A1DFE322300AD18E1 /* controller */,
+				3FC9450B1DFE322300AD18E1 /* model */,
+				3FC9450C1DFE322300AD18E1 /* view */,
+			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		3F0D838A1DE4374300C3B87C /* Tools(工具) */ = {
+		3FC9450A1DFE322300AD18E1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Tools(工具)";
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3FC9450B1DFE322300AD18E1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FC9450C1DFE322300AD18E1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D83931DE44F2300C3B87C /* Profile.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3FC9450D1DFE322300AD18E1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
 			path = Tools;
 			sourceTree = "<group>";
 		};
@@ -166,17 +288,12 @@
 		3FE11F161DE42A3C00F62CFE /* DYZB */ = {
 			isa = PBXGroup;
 			children = (
+				3FC944F81DFE322300AD18E1 /* Classes */,
 				3FE11F171DE42A3C00F62CFE /* AppDelegate.swift */,
 				3FE11F191DE42A3C00F62CFE /* ViewController.swift */,
-				3FE11F1B1DE42A3C00F62CFE /* Main.storyboard */,
-				3F0D83931DE44F2300C3B87C /* Profile.storyboard */,
-				3F0D83901DE44F0A00C3B87C /* Follow.storyboard */,
-				3F0D838E1DE44EEB00C3B87C /* Live.storyboard */,
-				3F0D838B1DE44EA100C3B87C /* Home.storyboard */,
 				3FE11F1E1DE42A3C00F62CFE /* Assets.xcassets */,
 				3FE11F201DE42A3C00F62CFE /* LaunchScreen.storyboard */,
 				3FE11F231DE42A3C00F62CFE /* Info.plist */,
-				3F0D83841DE4374300C3B87C /* Classes */,
 			);
 			path = DYZB;
 			sourceTree = "<group>";
@@ -338,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC9450F1DFE341500AD18E1 /* MainViewController.swift in Sources */,
 				3FE11F1A1DE42A3C00F62CFE /* ViewController.swift in Sources */,
 				3FE11F181DE42A3C00F62CFE /* AppDelegate.swift in Sources */,
 			);
@@ -381,6 +499,7 @@
 				3F0D838C1DE44EA100C3B87C /* Base */,
 			);
 			name = Home.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		3F0D83901DE44F0A00C3B87C /* Follow.storyboard */ = {
@@ -389,6 +508,7 @@
 				3F0D83911DE44F0A00C3B87C /* Base */,
 			);
 			name = Follow.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		3FE11F1B1DE42A3C00F62CFE /* Main.storyboard */ = {
@@ -397,6 +517,7 @@
 				3FE11F1C1DE42A3C00F62CFE /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		3FE11F201DE42A3C00F62CFE /* LaunchScreen.storyboard */ = {
@@ -507,7 +628,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4SYHN34GLY;
 				INFOPLIST_FILE = DYZB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruixing.DYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,7 +642,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4SYHN34GLY;
 				INFOPLIST_FILE = DYZB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruixing.DYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
