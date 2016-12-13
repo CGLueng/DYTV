@@ -39,7 +39,8 @@ class CommendViewController: UIViewController {
         //注册 cell
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
         //注册组头
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+//        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        collectionView.register(UINib(nibName: "HomeCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
         return collectionView
     }()
@@ -81,7 +82,7 @@ extension CommendViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
-        headView.backgroundColor = UIColor.orange
+        
         return headView
     }
 }

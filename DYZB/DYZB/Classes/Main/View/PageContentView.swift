@@ -144,7 +144,6 @@ extension PageContentView : UICollectionViewDelegate {
             }
         }
         //将progress/sourceIndex/targetIndex传递给titleView
-        print("\(progress)--\(sourceIndex)--\(targetIndex)")
         delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

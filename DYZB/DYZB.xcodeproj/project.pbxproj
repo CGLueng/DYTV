@@ -10,6 +10,8 @@
 		3F3B22FD1DFE7C4F00EC2B03 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B22FC1DFE7C4F00EC2B03 /* PageContentView.swift */; };
 		3F3B22FF1DFE807300EC2B03 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B22FE1DFE807300EC2B03 /* UIColor-Extension.swift */; };
 		3F4714C51DFF9B5900D7B492 /* CommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4714C41DFF9B5900D7B492 /* CommendViewController.swift */; };
+		3F4714C81DFFE3F700D7B492 /* HomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4714C61DFFE3F700D7B492 /* HomeCollectionHeaderView.swift */; };
+		3F4714C91DFFE3F700D7B492 /* HomeCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4714C71DFFE3F700D7B492 /* HomeCollectionHeaderView.xib */; };
 		3F8D4F6D1DFE3B77008E7F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D4F4C1DFE3B77008E7F2C /* AppDelegate.swift */; };
 		3F8D4F6F1DFE3B77008E7F2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D4F5D1DFE3B77008E7F2C /* MainViewController.swift */; };
 		3F8D4F701DFE3B77008E7F2C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8D4F651DFE3B77008E7F2C /* Follow.storyboard */; };
@@ -49,6 +51,8 @@
 		3F3B22FC1DFE7C4F00EC2B03 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		3F3B22FE1DFE807300EC2B03 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		3F4714C41DFF9B5900D7B492 /* CommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommendViewController.swift; sourceTree = "<group>"; };
+		3F4714C61DFFE3F700D7B492 /* HomeCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionHeaderView.swift; sourceTree = "<group>"; };
+		3F4714C71DFFE3F700D7B492 /* HomeCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionHeaderView.xib; sourceTree = "<group>"; };
 		3F8D4F4C1DFE3B77008E7F2C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8D4F5D1DFE3B77008E7F2C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3F8D4F651DFE3B77008E7F2C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Follow.storyboard; path = ../../../Follow.storyboard; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				3F8D4F661DFE3B77008E7F2C /* Home.storyboard */,
+				3F4714C61DFFE3F700D7B492 /* HomeCollectionHeaderView.swift */,
+				3F4714C71DFFE3F700D7B492 /* HomeCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 				3F8D4F741DFE3B77008E7F2C /* Live.storyboard in Resources */,
 				3F8D4F731DFE3B77008E7F2C /* LaunchScreen.storyboard in Resources */,
 				3F8D4F7B1DFE416F008E7F2C /* Assets.xcassets in Resources */,
+				3F4714C91DFFE3F700D7B492 /* HomeCollectionHeaderView.xib in Resources */,
 				3F8D4F701DFE3B77008E7F2C /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +496,7 @@
 				3F8D4F801DFE4CFD008E7F2C /* PageTitleView.swift in Sources */,
 				3F3B22FD1DFE7C4F00EC2B03 /* PageContentView.swift in Sources */,
 				3F8D4F7E1DFE46DA008E7F2C /* UIBarButtonItem-Extension.swift in Sources */,
+				3F4714C81DFFE3F700D7B492 /* HomeCollectionHeaderView.swift in Sources */,
 				3F8D4F821DFE4F2F008E7F2C /* Common.swift in Sources */,
 				3F8D4F791DFE3C3A008E7F2C /* HomeViewController.swift in Sources */,
 				3F4714C51DFF9B5900D7B492 /* CommendViewController.swift in Sources */,
