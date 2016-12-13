@@ -14,6 +14,8 @@
 		3F4714C91DFFE3F700D7B492 /* HomeCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4714C71DFFE3F700D7B492 /* HomeCollectionHeaderView.xib */; };
 		3F4714CC1DFFF23A00D7B492 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4714CA1DFFF23A00D7B492 /* CollectionNormalCell.swift */; };
 		3F4714CD1DFFF23A00D7B492 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4714CB1DFFF23A00D7B492 /* CollectionNormalCell.xib */; };
+		3F4714D01DFFFB2D00D7B492 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4714CE1DFFFB2D00D7B492 /* CollectionPrettyCell.swift */; };
+		3F4714D11DFFFB2D00D7B492 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4714CF1DFFFB2D00D7B492 /* CollectionPrettyCell.xib */; };
 		3F8D4F6D1DFE3B77008E7F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D4F4C1DFE3B77008E7F2C /* AppDelegate.swift */; };
 		3F8D4F6F1DFE3B77008E7F2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D4F5D1DFE3B77008E7F2C /* MainViewController.swift */; };
 		3F8D4F701DFE3B77008E7F2C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8D4F651DFE3B77008E7F2C /* Follow.storyboard */; };
@@ -57,6 +59,8 @@
 		3F4714C71DFFE3F700D7B492 /* HomeCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionHeaderView.xib; sourceTree = "<group>"; };
 		3F4714CA1DFFF23A00D7B492 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		3F4714CB1DFFF23A00D7B492 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		3F4714CE1DFFFB2D00D7B492 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		3F4714CF1DFFFB2D00D7B492 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		3F8D4F4C1DFE3B77008E7F2C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8D4F5D1DFE3B77008E7F2C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3F8D4F651DFE3B77008E7F2C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Follow.storyboard; path = ../../../Follow.storyboard; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 				3F3B22FC1DFE7C4F00EC2B03 /* PageContentView.swift */,
 				3F4714CA1DFFF23A00D7B492 /* CollectionNormalCell.swift */,
 				3F4714CB1DFFF23A00D7B492 /* CollectionNormalCell.xib */,
+				3F4714CE1DFFFB2D00D7B492 /* CollectionPrettyCell.swift */,
+				3F4714CF1DFFFB2D00D7B492 /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				3F8D4F741DFE3B77008E7F2C /* Live.storyboard in Resources */,
 				3F8D4F731DFE3B77008E7F2C /* LaunchScreen.storyboard in Resources */,
 				3F8D4F7B1DFE416F008E7F2C /* Assets.xcassets in Resources */,
+				3F4714D11DFFFB2D00D7B492 /* CollectionPrettyCell.xib in Resources */,
 				3F4714C91DFFE3F700D7B492 /* HomeCollectionHeaderView.xib in Resources */,
 				3F8D4F701DFE3B77008E7F2C /* Follow.storyboard in Resources */,
 			);
@@ -506,6 +513,7 @@
 				3F4714C81DFFE3F700D7B492 /* HomeCollectionHeaderView.swift in Sources */,
 				3F8D4F821DFE4F2F008E7F2C /* Common.swift in Sources */,
 				3F8D4F791DFE3C3A008E7F2C /* HomeViewController.swift in Sources */,
+				3F4714D01DFFFB2D00D7B492 /* CollectionPrettyCell.swift in Sources */,
 				3F4714CC1DFFF23A00D7B492 /* CollectionNormalCell.swift in Sources */,
 				3F4714C51DFF9B5900D7B492 /* CommendViewController.swift in Sources */,
 			);

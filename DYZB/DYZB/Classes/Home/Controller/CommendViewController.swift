@@ -11,10 +11,12 @@ import UIKit
 // MARK:- 定义常量
 private let kItemMargin : CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) * 0.5
-private let kItemH = kItemW * 3 / 4
+private let kNormalItemH = kItemW * 3 / 4
+private let kPrettyItemH = kItemW * 4 / 3
 private let kheaderH : CGFloat = 50
 
 private let kNormalCellID = "kNormalCellID"
+private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 // MARK:- 定义类
@@ -26,7 +28,7 @@ class CommendViewController: UIViewController {
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //创建布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kItemH)
+        layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemMargin
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kheaderH)
@@ -35,11 +37,13 @@ class CommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
+        collectionView.delegate = self
         //宽高随着父控件拉伸而拉伸
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         //注册 cell
 //        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         //注册组头
 //        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         collectionView.register(UINib(nibName: "HomeCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
@@ -63,8 +67,8 @@ extension CommendViewController {
     }
 }
 
-// MARK:- 遵守UICollectionViewDataSource
-extension CommendViewController : UICollectionViewDataSource {
+// MARK:- 遵守UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension CommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
     }
@@ -77,8 +81,12 @@ extension CommendViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
-        
+        var cell : UICollectionViewCell
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+        }else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        }
         return cell
     }
     
@@ -86,6 +94,13 @@ extension CommendViewController : UICollectionViewDataSource {
         let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
         
         return headView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kItemW, height: kPrettyItemH)
+        }
+        return CGSize(width: kItemW, height: kNormalItemH)
     }
 }
 
