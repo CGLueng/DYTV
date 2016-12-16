@@ -14,6 +14,7 @@ private let kItemW = (kScreenW - 3 * kItemMargin) * 0.5
 private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kheaderH : CGFloat = 50
+private let kCycleViewH = kScreenW * 3 / 8
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -25,6 +26,7 @@ class CommendViewController: UIViewController {
     // MARK:- 设置属性
     
     // MARK:- 懒加载属性
+    fileprivate lazy var commendViewModel : CommendViewModel = CommendViewModel()
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //创建布局
         let layout = UICollectionViewFlowLayout()
@@ -50,13 +52,19 @@ class CommendViewController: UIViewController {
         
         return collectionView
     }()
+    fileprivate lazy var cycleView : CommendCycleView = {
+        let cycleView = CommendCycleView.commendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
 
     // MARK:- 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置 UI
         setupUI()
-        
+        //发送网络请求
+        loadData()
     }
 }
 
@@ -64,34 +72,62 @@ class CommendViewController: UIViewController {
 extension CommendViewController {
     fileprivate func setupUI() {
         view.addSubview(collectionView)
+        //添加 cycleview
+        collectionView.addSubview(cycleView)
+        //设置 collectionview 的内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+    }
+}
+
+
+// MARK:- 请求数据
+extension CommendViewController {
+    fileprivate func loadData() {
+        //请求推荐数据
+        commendViewModel.requestData { 
+            self.collectionView.reloadData()
+        }
+        //请求轮播图数据
+        commendViewModel.requestCycleData { 
+            self.cycleView.cycleModelArr = self.commendViewModel.cycleModelArr
+        }
     }
 }
 
 // MARK:- 遵守UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension CommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return commendViewModel.anchorGroupArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group = commendViewModel.anchorGroupArr[section]
+        return group.anchorArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell : UICollectionViewCell
+        //取出模型数据
+        let group = commendViewModel.anchorGroupArr[indexPath.section]
+        let anchor = group.anchorArr[indexPath.item]
+        //定义 cell
+        let cell : CollectionViewBasicCell!
+        //取出 cell
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
         }else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
         }
+        //赋值
+        cell.anchor = anchor
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        
+        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! HomeCollectionHeaderView
+        
+        headView.group = commendViewModel.anchorGroupArr[indexPath.section]
         
         return headView
     }
