@@ -50,6 +50,10 @@
                 <constraint firstItem="drj-Xf-Ft6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wfS-7B-dM6"/>
             </constraints>
             <size key="customSize" width="318" height="130"/>
+            <connections>
+                <outlet property="icomImageView" destination="drj-Xf-Ft6" id="c0q-1i-rkK"/>
+                <outlet property="titleLB" destination="mbM-Yo-eAj" id="Qim-Lw-3Rg"/>
+            </connections>
             <point key="canvasLocation" x="-133" y="-13"/>
         </collectionViewCell>
     </objects>
