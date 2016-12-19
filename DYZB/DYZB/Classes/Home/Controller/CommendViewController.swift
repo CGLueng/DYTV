@@ -15,6 +15,7 @@ private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kheaderH : CGFloat = 50
 private let kCycleViewH = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -27,6 +28,7 @@ class CommendViewController: UIViewController {
     
     // MARK:- 懒加载属性
     fileprivate lazy var commendViewModel : CommendViewModel = CommendViewModel()
+    
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //创建布局
         let layout = UICollectionViewFlowLayout()
@@ -52,10 +54,17 @@ class CommendViewController: UIViewController {
         
         return collectionView
     }()
+    
     fileprivate lazy var cycleView : CommendCycleView = {
         let cycleView = CommendCycleView.commendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    
+    fileprivate lazy var gameView : CommendGameView = {
+        let gameView = CommendGameView.commendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
 
     // MARK:- 系统回调函数
@@ -74,8 +83,11 @@ extension CommendViewController {
         view.addSubview(collectionView)
         //添加 cycleview
         collectionView.addSubview(cycleView)
+        //添加 gameView
+        collectionView.addSubview(gameView)
         //设置 collectionview 的内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH +
+             kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -86,6 +98,8 @@ extension CommendViewController {
         //请求推荐数据
         commendViewModel.requestData { 
             self.collectionView.reloadData()
+            //将数据传递给 gameView
+            self.gameView.groups = self.commendViewModel.anchorGroupArr
         }
         //请求轮播图数据
         commendViewModel.requestCycleData { 

@@ -17,6 +17,8 @@
 		3F4714CD1DFFF23A00D7B492 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4714CB1DFFF23A00D7B492 /* CollectionNormalCell.xib */; };
 		3F4714D01DFFFB2D00D7B492 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4714CE1DFFFB2D00D7B492 /* CollectionPrettyCell.swift */; };
 		3F4714D11DFFFB2D00D7B492 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4714CF1DFFFB2D00D7B492 /* CollectionPrettyCell.xib */; };
+		3F4DF1D91E076D12009D0B82 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF1D71E076D12009D0B82 /* CollectionGameCell.swift */; };
+		3F4DF1DA1E076D12009D0B82 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4DF1D81E076D12009D0B82 /* CollectionGameCell.xib */; };
 		3F5391681E038665001D5E6E /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5391671E038665001D5E6E /* Double-Extension.swift */; };
 		3F53916A1E039D4C001D5E6E /* CollectionViewBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5391691E039D4C001D5E6E /* CollectionViewBasicCell.swift */; };
 		3F53916E1E03C881001D5E6E /* CommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53916D1E03C881001D5E6E /* CommendCycleView.swift */; };
@@ -44,6 +46,8 @@
 		3F8D4F821DFE4F2F008E7F2C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D4F811DFE4F2F008E7F2C /* Common.swift */; };
 		3FE11F2D1DE42A3C00F62CFE /* DYZBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11F2C1DE42A3C00F62CFE /* DYZBTests.swift */; };
 		3FE11F381DE42A3C00F62CFE /* DYZBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11F371DE42A3C00F62CFE /* DYZBUITests.swift */; };
+		3FF602E71E052CE500D5D697 /* CommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF602E61E052CE500D5D697 /* CommendGameView.swift */; };
+		3FF602E91E052CF300D5D697 /* CommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF602E81E052CF300D5D697 /* CommendGameView.xib */; };
 		4470A4CF89C96222BC535D99 /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28C41309DF16DA4D93B3897 /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +79,8 @@
 		3F4714CB1DFFF23A00D7B492 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		3F4714CE1DFFFB2D00D7B492 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		3F4714CF1DFFFB2D00D7B492 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		3F4DF1D71E076D12009D0B82 /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
+		3F4DF1D81E076D12009D0B82 /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
 		3F5391671E038665001D5E6E /* Double-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
 		3F5391691E039D4C001D5E6E /* CollectionViewBasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicCell.swift; sourceTree = "<group>"; };
 		3F53916D1E03C881001D5E6E /* CommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommendCycleView.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 		3FE11F331DE42A3C00F62CFE /* DYZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE11F371DE42A3C00F62CFE /* DYZBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYZBUITests.swift; sourceTree = "<group>"; };
 		3FE11F391DE42A3C00F62CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF602E61E052CE500D5D697 /* CommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommendGameView.swift; sourceTree = "<group>"; };
+		3FF602E81E052CF300D5D697 /* CommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommendGameView.xib; sourceTree = "<group>"; };
 		9D955E774E730BB6E5779532 /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		D0FD590AF5FBF5A823F49197 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
 		E28C41309DF16DA4D93B3897 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +280,10 @@
 				3F53916F1E03C890001D5E6E /* CommendCycleView.xib */,
 				3F5391731E03EE91001D5E6E /* CollectionCycleCell.swift */,
 				3F5391741E03EE91001D5E6E /* CollectionCycleCell.xib */,
+				3FF602E61E052CE500D5D697 /* CommendGameView.swift */,
+				3FF602E81E052CF300D5D697 /* CommendGameView.xib */,
+				3F4DF1D71E076D12009D0B82 /* CollectionGameCell.swift */,
+				3F4DF1D81E076D12009D0B82 /* CollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,6 +578,7 @@
 			files = (
 				3F8D4F751DFE3B77008E7F2C /* Main.storyboard in Resources */,
 				3F8D4F721DFE3B77008E7F2C /* Info.plist in Resources */,
+				3F4DF1DA1E076D12009D0B82 /* CollectionGameCell.xib in Resources */,
 				3F4714CD1DFFF23A00D7B492 /* CollectionNormalCell.xib in Resources */,
 				3F8D4F761DFE3B77008E7F2C /* Profile.storyboard in Resources */,
 				3F8D4F711DFE3B77008E7F2C /* Home.storyboard in Resources */,
@@ -576,6 +589,7 @@
 				3F4714C91DFFE3F700D7B492 /* HomeCollectionHeaderView.xib in Resources */,
 				3F5391761E03EE91001D5E6E /* CollectionCycleCell.xib in Resources */,
 				3F8D4F701DFE3B77008E7F2C /* Follow.storyboard in Resources */,
+				3FF602E91E052CF300D5D697 /* CommendGameView.xib in Resources */,
 				3F5391701E03C890001D5E6E /* CommendCycleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,9 +680,11 @@
 				3F8D4F791DFE3C3A008E7F2C /* HomeViewController.swift in Sources */,
 				3F6D159A1E023D1600DC545B /* NSDate-Extension.swift in Sources */,
 				3F4714D01DFFFB2D00D7B492 /* CollectionPrettyCell.swift in Sources */,
+				3F4DF1D91E076D12009D0B82 /* CollectionGameCell.swift in Sources */,
 				3F4714CC1DFFF23A00D7B492 /* CollectionNormalCell.swift in Sources */,
 				3F6D15961E0224F600DC545B /* CommendViewModel.swift in Sources */,
 				3F4714C51DFF9B5900D7B492 /* CommendViewController.swift in Sources */,
+				3FF602E71E052CE500D5D697 /* CommendGameView.swift in Sources */,
 				3F5391751E03EE91001D5E6E /* CollectionCycleCell.swift in Sources */,
 				3F6D159E1E024B2800DC545B /* AnchorModel.swift in Sources */,
 			);
