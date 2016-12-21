@@ -99,7 +99,16 @@ extension CommendViewController {
         commendViewModel.requestData { 
             self.collectionView.reloadData()
             //将数据传递给 gameView
-            self.gameView.groups = self.commendViewModel.anchorGroupArr
+            var groups = self.commendViewModel.anchorGroupArr
+            //移除前两组数据
+            groups.removeFirst()
+            groups.removeFirst()
+            //添加更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+
+            self.gameView.groups = groups
         }
         //请求轮播图数据
         commendViewModel.requestCycleData { 

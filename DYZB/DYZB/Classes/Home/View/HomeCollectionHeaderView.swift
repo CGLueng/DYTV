@@ -27,5 +27,11 @@ class HomeCollectionHeaderView: UICollectionReusableView {
         super.awakeFromNib()
         // Initialization code
     }
-    
+}
+
+// MARK:- 快速加载类方法
+extension HomeCollectionHeaderView {
+    class func collectionHeaderView() -> HomeCollectionHeaderView {
+        return Bundle.main.loadNibNamed("HomeCollectionHeaderView", owner: nil, options: nil)?.first as! HomeCollectionHeaderView
+    }
 }

@@ -14,15 +14,8 @@ private let kEdgeInsetMargin : CGFloat = 10
 class CommendGameView: UIView {
     
     // MARK:- 定义数据属性
-    var groups : [AnchorGroup]? {
+    var groups : [BasicGameModel]? {
         didSet {
-            //移除前两组数据
-            groups?.removeFirst()
-            groups?.removeFirst()
-            //添加更多组
-            let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
             //刷新
             self.collectionView.reloadData()
         }
