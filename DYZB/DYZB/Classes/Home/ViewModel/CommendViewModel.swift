@@ -8,9 +8,8 @@
 
 import UIKit
 
-class CommendViewModel {
+class CommendViewModel : BasicViewModel {
     // MARK:- 懒加载属性
-    lazy var anchorGroupArr : [AnchorGroup] = [AnchorGroup]()
     lazy var cycleModelArr : [CycleModel] = [CycleModel]()
     
     fileprivate lazy var group1 : AnchorGroup = AnchorGroup()
@@ -67,25 +66,15 @@ extension CommendViewModel {
         
         //请求游戏部分
          dispatchGroup.enter()//一旦请求数据线进入组
-        //http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1481770951
-        NetWorkingTools.requestData(type: .GET, URL: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters, finishedCallback:{(result) in
-            //转成字典类型
-            guard let resultDict = result as? [String : NSObject] else {return}
-            
-            guard let dataArr = resultDict["data"] as? [[String : NSObject]] else {return}
-            
-            for dict in dataArr {
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroupArr.append(group)
-            }
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
             //请求到数据再离开组
             dispatchGroup.leave()
-        })
+        }
         
         //所有数据请求到之后进行排序
         dispatchGroup.notify(queue: DispatchQueue.main, execute: {
-            self.anchorGroupArr.insert(self.group2, at: 0)
-            self.anchorGroupArr.insert(self.group1, at: 0)
+            self.anchorGroups.insert(self.group2, at: 0)
+            self.anchorGroups.insert(self.group1, at: 0)
             
             finishedCallback()
         })
